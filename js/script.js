@@ -5,6 +5,11 @@ let stream = null;
 let useBack = true;
 
 async function loadModel() {
+    if (typeof window.tf === "undefined") {
+        console.error("TensorFlow.js is missing. Make sure <script src='https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.4/dist/tf.min.js'></script> is loaded before teachablemachine.");
+        modelLoaded = false;
+        return;
+    }
     try {
         const URL = "model/";
         model = await tmImage.load(URL + "model.json", URL + "metadata.json");
