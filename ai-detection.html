@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Detection</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<img src="https://png.pngtree.com/png-vector/20190121/ourmid/pngtree-green-big-tree-trees-design-diagram-png-image_516996.png" class="tree-left">
+<img src="https://png.pngtree.com/png-vector/20190121/ourmid/pngtree-green-big-tree-trees-design-diagram-png-image_516996.png" class="tree-right">
+<div class="leaf-container"></div>
+
+<nav>
+<div class="logo">
+<img src="images/logo.png">
+<h2>Solar AI System</h2>
+</div>
+
+<div>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="mold-database.html">Mold Database</a>
+</div>
+</nav>
+
+<h1 class="title">AI Mold Detection</h1>
+
+<div class="camera-box">
+<video id="camera" autoplay></video>
+</div>
+
+<center>
+<button class="main-btn" onclick="startCamera()">Start Camera</button>
+<button class="main-btn" onclick="switchCamera()">switchCamera</button>
+<button class="main-btn" onclick="analyze()">Analyze Mold</button>
+
+<p id="result">Ready for scan...</p>
+<canvas id="snapshot" style="display:none;"></canvas>
+</center>
+<script src="js/teachablemachine-image.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

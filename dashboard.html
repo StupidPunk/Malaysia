@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+<img src="https://png.pngtree.com/png-vector/20190121/ourmid/pngtree-green-big-tree-trees-design-diagram-png-image_516996.png" class="tree-left">
+<img src="https://png.pngtree.com/png-vector/20190121/ourmid/pngtree-green-big-tree-trees-design-diagram-png-image_516996.png" class="tree-right">    
+    
+
+<div class="leaf-container"></div>
+
+<nav>
+<div class="logo">
+<img src="images/logo.png">
+<h2>Solar AI System</h2>
+</div>
+
+<div>
+<a href="index.html">Home</a>
+<a href="ai-detection.html">AI Detection</a>
+<a href="mold-database.html">Mold Database</a>
+</div>
+</nav>
+
+<h1 class="title">Solar Drying Dashboard</h1>
+
+<div class="dashboard">
+
+<div class="card">
+<h2>Temperature</h2>
+<p class="value" id="temp">--</p>
+</div>
+
+<div class="card">
+<h2>Humidity</h2>
+<p class="value" id="hum">--</p>
+</div>
+
+<div class="card">
+<h2>Mold Risk</h2>
+<p class="value" id="risk">--</p>
+</div>
+
+</div>
+
+<div class="chart-container">
+<canvas id="tempChart"></canvas>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
