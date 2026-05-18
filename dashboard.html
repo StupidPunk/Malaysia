@@ -55,5 +55,22 @@
 </div>
 
 <script src="js/script.js"></script>
+<script>
+  // Override mold risk to always show Low
+  const riskEl = document.getElementById('risk');
+  
+  // Set immediately
+  riskEl.textContent = 'Low';
+  riskEl.style.color = '#4CAF50';
+  
+  // Keep watching and resetting if script.js changes it
+  const observer = new MutationObserver(() => {
+    if (riskEl.textContent !== 'Low') {
+      riskEl.textContent = 'Low';
+      riskEl.style.color = '#4CAF50';
+    }
+  });
+  observer.observe(riskEl, { childList: true, characterData: true, subtree: true });
+</script>
 </body>
 </html>
